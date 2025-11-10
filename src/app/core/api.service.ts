@@ -15,5 +15,11 @@ export class ApiService {
     return this.http.post<StockResponse>(`${this.apiUrl}/add`, quantity);
   }
 
-  // Other generic HTTP methods can be added here (get, put, delete)
+  postPurchaseStock(quantity: number): Observable<StockResponse> {
+    return this.http.post<StockResponse>(`${this.apiUrl}/purchase`, quantity);
+  }
+
+  getTotalStock(quantity: number): Observable<StockResponse> {
+    return this.http.get<StockResponse>(`${this.apiUrl}/total`);
+  }
 }

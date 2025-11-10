@@ -13,4 +13,14 @@ export class StockService {
     // Could add feature-specific logic here if needed
     return this.apiService.postAddStock(quantity);
   }
+
+  purchaseStock(quantity: number): Observable<StockResponse> {
+    // Could add feature-specific logic here if needed
+    return this.apiService.postPurchaseStock(quantity);
+  }
+
+  getTotalStock(quantity: number): Observable<StockResponse> {
+    // Could add feature-specific logic here if needed
+    return this.apiService.getTotalStock(quantity);
+  }
 }
