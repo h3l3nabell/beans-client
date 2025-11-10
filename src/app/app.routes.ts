@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
-import { StockAddComponent } from './features/stock-control/components/stock-add.component';
+import { StockControlComponent } from './features/stock-control/components/stock-control.component';
 
 export const routes: Routes = [
-  { path: 'stock', component: StockAddComponent },
+  { path: 'stock', component: StockControlComponent },
   { path: '', redirectTo: '/stock', pathMatch: 'full' },
 ];
