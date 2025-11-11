@@ -19,8 +19,8 @@ export class StockService {
     return this.apiService.postPurchaseStock(quantity);
   }
 
-  getTotalStock(quantity: number): Observable<StockResponse> {
+  getTotalStock(): Observable<StockResponse> {
     // Could add feature-specific logic here if needed
-    return this.apiService.getTotalStock(quantity);
+    return this.apiService.getTotalStock();
   }
 }

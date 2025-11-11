@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { StockAddComponent } from './stock-add.component';
 import { StockPurchaseComponent } from './stock-purchase.component';
+import { StockLevelComponent } from './stock-level.component';
 
 @Component({
   selector: 'app-stock-control',
   template: `
     <div class="stock-control">
+      <app-stock-level />
       <app-stock-add />
       <app-stock-purchase />
     </div>
@@ -22,6 +24,6 @@ import { StockPurchaseComponent } from './stock-purchase.component';
     `,
   ],
   standalone: true,
-  imports: [StockAddComponent, StockPurchaseComponent],
+  imports: [StockAddComponent, StockPurchaseComponent, StockLevelComponent],
 })
 export class StockControlComponent {}

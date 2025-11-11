@@ -19,7 +19,7 @@ export class ApiService {
     return this.http.post<StockResponse>(`${this.apiUrl}/purchase`, quantity);
   }
 
-  getTotalStock(quantity: number): Observable<StockResponse> {
+  getTotalStock(): Observable<StockResponse> {
     return this.http.get<StockResponse>(`${this.apiUrl}/total`);
   }
 }
