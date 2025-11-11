@@ -2,6 +2,16 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.9.
 
+This client is a simple Angular Client that calls a .Net V9 (Core) C# web api, to mock up a very simple stock control system for storing beans.
+
+You can add beans to the stock, and you can purchase beans from the stock.
+
+There is also a component that shows the total beans available in stock at any point in time - and this is updated by subscribing to the server using SignalR, so that multiple users can add or purchase beans in their client, and the total stock will be updated immediately on the client for all users.
+
+Run it in multiple browsers to try it out.
+
+You will also need the beans-server project - also available in github,
+
 ## Development server
 
 To start a local development server, run:
