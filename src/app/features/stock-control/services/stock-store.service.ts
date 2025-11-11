@@ -16,14 +16,18 @@ export class StockStoreService {
 
   private async initializeSignalR(): Promise<void> {
     // Connect to SignalR hub
+    console.log('🔌 Attempting to connect to SignalR...');
     await this.signalrService.connect();
 
     // Listen for stock updates from SignalR
     const hubConnection = this.signalrService.getHubConnection();
+
     hubConnection.on('StockUpdated', (newStockLevel: number) => {
-      console.log('SignalR: Stock updated to', newStockLevel);
+      console.log('📦 SignalR: Stock updated to', newStockLevel);
       this.stockSignal.set(newStockLevel);
     });
+
+    console.log('👂 Listening for "StockUpdated" events from SignalR');
   }
 
   // Load initial stock value from API
